@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+#navbar {
+  background: #2c3e50;
+  color: #fff;
+  width: 250px;
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#navbar header {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+#navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#navbar li {
+  margin: 12px 0;
+}
+
+#navbar a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  text-decoration: underline;
+}
+
+#main-doc {
+  margin-left: 270px;
+  padding: 20px;
+  flex: 1;
+}
+
+.main-section {
+  margin-bottom: 40px;
+}
+
+.main-section header {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
