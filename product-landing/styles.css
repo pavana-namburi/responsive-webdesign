@@ -274,7 +274,7 @@ footer .social-media a:focus img {
   header#header {
     flex-direction: column;
     align-items: flex-start;
-    height:fit-content;
+    height:max-content;
   }
   #Features ul {
     flex-direction: column;
