@@ -156,7 +156,7 @@ body.dark-mode pre {
 @media screen and (max-width: 768px) {
     #navbar {
         position: relative;
-        width: 100%;
+        width: auto;
         height: auto;
     }
 
