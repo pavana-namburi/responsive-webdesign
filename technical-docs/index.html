@@ -31,7 +31,113 @@
   <!-- Theme Toggle -->
   <button class="theme-toggle" onclick="toggleTheme()">🌗</button>
 
-  
+     <!-- Main Content -->
+  <main class="content">
+    <h1 id="intro">Introduction</h1>
+    <p>JavaScript is the language of the web, allowing interactive and dynamic content on websites. It runs inside the browser and can update HTML, CSS, and handle user interactions.</p>
+
+    <h2 id="variables">Variables</h2>
+    <p>Variables store data values. Use <code>let</code>, <code>const</code>, or <code>var</code>.</p>
+    <pre><code>let name = "Pavana"; // changeable
+const pi = 3.14;     // fixed value
+var age = 20;        // old style (avoid)</code></pre>
+
+    <h2 id="datatypes">Data Types</h2>
+    <p>JavaScript has different data types: string, number, boolean, object, array, undefined, null, and symbol.</p>
+    <pre><code>let text = "Hello";      // String
+let num = 100;           // Number
+let isOnline = true;     // Boolean
+let fruits = ["apple","mango"]; // Array
+let student = {name:"Pavana", age:20}; // Object</code></pre>
+
+    <h2 id="operators">Operators</h2>
+    <p>Operators perform operations on variables and values.</p>
+    <pre><code>let a = 10, b = 5;
+console.log(a + b); // 15 (Addition)
+console.log(a - b); // 5  (Subtraction)
+console.log(a * b); // 50 (Multiplication)
+console.log(a / b); // 2  (Division)</code></pre>
+
+    <h2 id="functions">Functions</h2>
+    <p>Functions are reusable blocks of code.</p>
+    <pre><code>function greet(user) {
+  return "Hello " + user;
+}
+console.log(greet("Pavana"));</code></pre>
+
+    <h2 id="objects">Objects</h2>
+    <p>Objects group related data and functions.</p>
+    <pre><code>let student = {
+  name: "Pavana",
+  age: 20,
+  greet: function() { return "Hi!"; }
+};
+console.log(student.greet());</code></pre>
+
+    <h2 id="arrays">Arrays</h2>
+    <p>Arrays store multiple values in a single variable.</p>
+    <pre><code>let colors = ["red", "green", "blue"];
+console.log(colors[0]); // red
+colors.push("yellow");  // add new item</code></pre>
+
+    <h2 id="loops">Loops</h2>
+    <p>Loops help execute code multiple times.</p>
+    <pre><code>for (let i = 0; i < 5; i++) {
+  console.log("Number: " + i);
+}
+
+let i = 0;
+while (i < 3) {
+  console.log("Hi " + i);
+  i++;
+}</code></pre>
+
+    <h2 id="conditions">Conditions</h2>
+    <p>Conditions let you control the flow of code.</p>
+    <pre><code>let score = 85;
+if(score >= 90){
+  console.log("Grade A");
+} else if(score >= 75){
+  console.log("Grade B");
+} else {
+  console.log("Grade C");
+}</code></pre>
+
+    <h2 id="dom">DOM</h2>
+    <p>Document Object Model (DOM) lets JS interact with HTML elements.</p>
+    <pre><code>document.getElementById("demo").innerText = "Updated!";
+document.querySelector("h1").style.color = "blue";</code></pre>
+
+    <h2 id="events">Events</h2>
+    <p>Events allow code to run when users interact with the page.</p>
+    <pre><code>&lt;button onclick="sayHello()"&gt;Click Me&lt;/button&gt;
+
+function sayHello(){
+  alert("Hello World!");
+}</code></pre>
+
+    <h2 id="es6">ES6 Features</h2>
+    <p>Modern JavaScript (ES6) introduced many features like arrow functions, template literals, and classes.</p>
+    <pre><code>// Arrow function
+const add = (x, y) => x + y;
+
+// Template literal
+let user = "Pavana";
+console.log(`Welcome ${user}!`);
+
+// Class
+class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  drive() {
+    return this.name + " is driving";
+  }
+}
+let car1 = new Car("Tesla");
+console.log(car1.drive());</code></pre>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>
