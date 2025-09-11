@@ -1,124 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Technical Documentation</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Technical Documentation</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Theme Toggle Button -->
-    <div class="theme-toggle">
-        <label class="switch">
-            <input type="checkbox" id="theme-switch">
-            <span class="slider round"></span>
-        </label>
-        <span id="theme-text">Dark Mode</span>
-    </div>
+  <!-- Hamburger Button -->
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
 
-    <!-- Navigation Sidebar -->
-    <nav id="navbar">
-        <header>JS Documentation</header>
-        <ul>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#syntax">Syntax</a></li>
-            <li><a class="nav-link" href="#variables">Variables</a></li>
-            <li><a class="nav-link" href="#functions">Functions</a></li>
-            <li><a class="nav-link" href="#loops">Loops</a></li>
-            <li><a class="nav-link" href="#events">Events</a></li>
-        </ul>
-    </nav>
+  <!-- Sidebar -->
+  <nav class="sidebar hidden" id="sidebar">
+    <h2>JavaScript Docs</h2>
+    <a href="#intro">Introduction</a>
+    <a href="#variables">Variables</a>
+    <a href="#functions">Functions</a>
+    <a href="#objects">Objects</a>
+    <a href="#dom">DOM</a>
+  </nav>
 
-    <!-- Main Content -->
-    <main id="main-doc">
-        <section id="introduction" class="main-section">
-            <h2>Introduction</h2>
-            <p>JavaScript (JS) is a high-level, dynamic programming language used primarily for web development. It allows developers to create interactive and dynamic web pages. JS can run in browsers, on servers using Node.js, and even in mobile and desktop applications.</p>
-            <p>Key features of JavaScript include:</p>
-            <ul>
-                <li>Event-driven programming</li>
-                <li>Dynamic typing</li>
-                <li>Prototype-based object orientation</li>
-                <li>First-class functions</li>
-            </ul>
-        </section>
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌗</button>
 
-        <section id="syntax" class="main-section">
-            <h2>Syntax</h2>
-            <p>JavaScript syntax is the set of rules that define a correctly structured JS program. Statements are generally terminated with a semicolon (<code>;</code>), and blocks of code are defined using curly braces <code>{}</code>.</p>
-            <p>Basic syntax elements include variables, operators, functions, and expressions.</p>
-            <pre><code class="code-snippet">
-// Example
-let greeting = "Hello World!";
-console.log(greeting);
-            </code></pre>
-        </section>
+  <!-- Main Content -->
+  <main class="content">
+    <h1 id="intro">Introduction</h1>
+    <p>JavaScript is the language of the web, allowing interactive and dynamic content on websites.</p>
 
-        <section id="variables" class="main-section">
-            <h2>Variables</h2>
-            <p>Variables are used to store data values. JavaScript provides three ways to declare variables:</p>
-            <ul>
-                <li><code>let</code>: Block-scoped variable, can be updated.</li>
-                <li><code>const</code>: Block-scoped constant, cannot be updated.</li>
-                <li><code>var</code>: Function-scoped variable (older, avoid in modern code).</li>
-            </ul>
-            <pre><code class="code-snippet">
-// Declaring variables
-let name = "Pavana";
-const PI = 3.1416;
-var age = 21;
-console.log(name, PI, age);
-            </code></pre>
-        </section>
+    <h2 id="variables">Variables</h2>
+    <p>Variables store data values. Use <code>let</code>, <code>const</code>, or <code>var</code>.</p>
+    <pre><code>let name = "Pavana";
+const pi = 3.14;</code></pre>
 
-        <section id="functions" class="main-section">
-            <h2>Functions</h2>
-            <p>Functions are reusable blocks of code that can take inputs (parameters) and return an output. They help make code modular and maintainable.</p>
-            <p>Functions can be declared in multiple ways:</p>
-            <ul>
-                <li>Function declaration</li>
-                <li>Function expression</li>
-                <li>Arrow function</li>
-            </ul>
-            <pre><code class="code-snippet">
-// Function declaration
-function greet(user) {
-    return "Hello " + user + "!";
+    <h2 id="functions">Functions</h2>
+    <p>Functions are reusable blocks of code.</p>
+    <pre><code>function greet(user) {
+  return "Hello " + user;
 }
-console.log(greet("Pavana"));
-            </code></pre>
-        </section>
+console.log(greet("Pavana"));</code></pre>
 
-        <section id="loops" class="main-section">
-            <h2>Loops</h2>
-            <p>Loops allow executing a block of code multiple times until a condition is met. Common types of loops include:</p>
-            <ul>
-                <li><code>for</code> loop: Runs a specific number of times</li>
-                <li><code>while</code> loop: Runs while a condition is true</li>
-                <li><code>do...while</code> loop: Executes at least once, then checks condition</li>
-            </ul>
-            <pre><code class="code-snippet">
-// For loop example
-for (let i = 1; i <= 5; i++) {
-    console.log(i);
-}
-            </code></pre>
-        </section>
+    <h2 id="objects">Objects</h2>
+    <p>Objects group related data and functions.</p>
+    <pre><code>let student = {
+  name: "Pavana",
+  age: 20,
+  greet: function() { return "Hi!"; }
+};</code></pre>
 
-        <section id="events" class="main-section">
-            <h2>Events</h2>
-            <p>Events are actions that occur in the browser, such as a user clicking a button or pressing a key. JavaScript can respond to these events using event listeners.</p>
-            <pre><code class="code-snippet">
-// Event listener example
-document.getElementById("myBtn").addEventListener("click", () => {
-    alert("Button clicked!");
-});
-            </code></pre>
-        </section>
-    </main>
+    <h2 id="dom">DOM</h2>
+    <p>Document Object Model (DOM) lets JS interact with HTML elements.</p>
+    <pre><code>document.getElementById("demo").innerText = "Updated!";</code></pre>
+  </main>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
